@@ -1,0 +1,142 @@
+<?php
+session_start();
+if(!isset($_SESSION["username"])){
+header("Location: login.php");
+exit(); }
+?><!--
+
+=========================================================
+* Volt Free - Bootstrap 5 Dashboard
+=========================================================
+
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Copyright 2021 Themesberg (https://www.themesberg.com)
+* License (https://themesberg.com/licensing)
+
+* Designed and coded by https://themesberg.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    @@include('./_head.html', {
+        "path": ".",
+        "title": "POP ME - Universidade"
+    })
+</head>
+
+<body>
+
+        <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+        @@if (environment === 'production') {
+            @@include('./_analytics_body.html')
+        }
+
+        @@include('./dashboard/_nav.html', {
+            "path": "./."
+        })
+
+        @@include('./dashboard/_sidenav.html', {
+            "path": "./.",
+            "page": "overview",
+            "page_group": "dashboard"
+        })
+    
+        <main class="content">
+
+            @@include('./dashboard/_topbar.html', {
+                "path": "./."
+            })
+<div class="col-12 mb-12">
+   <div class="card border-0 shadow">
+      <div class="card-header">
+         <div class="row align-items-center">
+            <div class="col">
+               <h2 class="fs-5 fw-bold mb-0">Cursos da faculdade</h2>
+            </div>
+         </div>
+      </div>
+      <div class="table-responsive">
+         <table class="table align-items-center table-flush">
+            <thead class="thead-light">
+               <tr>
+                  <th class="border-bottom" scope="col">Nome do curso</th>
+                  <th class="border-bottom" scope="col">Alunos</th>
+                  <th class="border-bottom" scope="col">Valor</th>
+                  <th class="border-bottom" scope="col">Taxa de novos alunos</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <th class="text-gray-900" scope="row">Curso 01</th>
+                  <td class="fw-bolder text-gray-500">3,225</td>
+                  <td class="fw-bolder text-gray-500">$20</td>
+                  <td class="fw-bolder text-gray-500">
+                     <div class="d-flex">
+                        <svg class="icon icon-xs text-danger me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L6.707 7.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        42,55%
+                     </div>
+                  </td>
+               </tr>
+               <tr>
+                  <th class="text-gray-900" scope="row">Curso 01</th>
+                  <td class="fw-bolder text-gray-500">3,225</td>
+                  <td class="fw-bolder text-gray-500">$20</td>
+                  <td class="fw-bolder text-gray-500">
+                     <div class="d-flex">
+                        <svg class="icon icon-xs text-danger me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L6.707 7.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        42,55%
+                     </div>
+                  </td>
+               </tr>
+               <tr>
+                  <th class="text-gray-900" scope="row">Curso 01</th>
+                  <td class="fw-bolder text-gray-500">3,225</td>
+                  <td class="fw-bolder text-gray-500">$20</td>
+                  <td class="fw-bolder text-gray-500">
+                     <div class="d-flex">
+                        <svg class="icon icon-xs text-danger me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L6.707 7.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        42,55%
+                     </div>
+                  </td>
+               </tr>
+               <tr>
+                  <th class="text-gray-900" scope="row">Curso 01</th>
+                  <td class="fw-bolder text-gray-500">3,225</td>
+                  <td class="fw-bolder text-gray-500">$20</td>
+                  <td class="fw-bolder text-gray-500">
+                     <div class="d-flex">
+                        <svg class="icon icon-xs text-danger me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L6.707 7.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        42,55%
+                     </div>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </div>
+</div>
+
+
+        </main>
+
+    @@include('./_scripts.html', {
+        "path": "./."
+    })
+    
+</body>
+
+</html>
